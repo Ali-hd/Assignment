@@ -24,7 +24,13 @@ const App = () => {
             component={HomeScreen}
             options={{ title: 'Home' }}
           />
-          <Stack.Screen name="Post" component={PostScreen} />
+          <Stack.Screen 
+            name="Post" 
+            component={PostScreen} 
+            options={({ route }) => ({
+              headerTitle: "loading..",
+            })}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </>

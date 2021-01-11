@@ -19,7 +19,7 @@ const Home = ({ navigation }) => {
                 setAllPosts(res.data)
             })
             .catch(err => console.log(err))
-    }, [])
+    },[])
 
     return <>
         <SafeAreaView>

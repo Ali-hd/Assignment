@@ -1,14 +1,22 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
 const Comment = ({comment}) => {
     return (
-        <View>
-            <Text>{comment.name}</Text>
-            <Text>{comment.email}</Text>
-            <Text>{comment.body}</Text>
+        <View style={styles.container}>
+            <Text>Name: {comment.name}</Text>
+            <Text>Email: {comment.email}</Text>
+            <Text>Description: {comment.body}</Text>
         </View>
     )
 }
+
+const styles = StyleSheet.create({
+    container: {
+        borderColor: "#000",
+        borderWidth: 1,
+        padding: 10
+    },
+});
 
 export default Comment;
